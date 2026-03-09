@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendow - Votre Marché Local</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white border-end shadow-sm" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4">
+                <div class="logo-container d-flex align-items-center justify-content-center">
+                    <img src="../img/logo.svg" width="50" class="me-2">
+                    <span class="logo-text">VENDOW</span>
+                </div>
+            </div>
+            <div class="list-group list-group-flush px-3">
+                <p class="text-muted small fw-bold mb-2">Catégories</p>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2 active-category">
+                    <span class="dot"></span> Toutes les catégories
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2">Vêtements</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2">Beauté</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2">Maison & Déco</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2">Électronique</a>
+                
+                <p class="text-muted small fw-bold mt-4 mb-2">Options</p>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2">Achat par Image</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2">À proximité</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 rounded py-2">Prix</a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 px-4 border-bottom sticky-top">
+                <div class="container-fluid">
+                    <button class="btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                    
+                    <div class="search-container mx-auto">
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-0"><i class="fas fa-search text-muted"></i></span>
+                            <input type="text" class="form-control bg-light border-0" placeholder="Rechercher des produits, marques...">
+                        </div>
+                    </div>
+
+                    <div class="navbar-nav ms-auto align-items-center">
+                        <div class="nav-item me-3">
+                            <a class="nav-link position-relative" href="#" id="cart-icon">
+                                <i class="fas fa-shopping-cart fs-5"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <div class="user-avatar">M</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="container-fluid px-4 py-5">
+                <div class="hero-section text-center mb-5">
+                    <h1 class="display-3 fw-800">
+                        <span class="text-blue">Shop with</span> <span class="text-orange">Confidence</span>
+                    </h1>
+                    <p class="lead text-muted fs-5">Parcourez des milliers de produits de qualité <span class="text-orange fw-bold">depuis les vendeurs algériens locaux</span></p>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="product-grid">
+                    <!-- Product 1 -->
+                    <div class="col">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <div class="position-relative">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" class="card-img-top" alt="Nike Shoes">
+                            </div>
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-vendor small fw-bold mb-1">CLOTHING</p>
+                                <h5 class="card-title fw-bold">Nike Running Shoes, Comfy & Durable.</h5>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="text-warning me-1"><i class="fas fa-star"></i></span>
+                                    <span class="fw-bold me-1">4.8</span>
+                                    <span class="text-muted small">(110)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">7,500 DZD</h4>
+                                    <button class="btn btn-cart add-to-cart" data-id="1"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <div class="position-relative">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80" class="card-img-top" alt="Chanel Perfume">
+                            </div>
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-vendor small fw-bold mb-1">PERFUMES</p>
+                                <h5 class="card-title fw-bold">Blue De Chanel Perfume, Original & Fresh.</h5>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="text-warning me-1"><i class="fas fa-star"></i></span>
+                                    <span class="fw-bold me-1">4.5</span>
+                                    <span class="text-muted small">(200)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">6,000 DZD</h4>
+                                    <button class="btn btn-cart add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <div class="position-relative">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1507473884658-cda1061807d9?w=600&q=80" class="card-img-top" alt="Boho Lamp">
+                            </div>
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-vendor small fw-bold mb-1">HOME & DECOR</p>
+                                <h5 class="card-title fw-bold">Boho Style Lamp, Warm Light Aesthetic.</h5>
+                                <div class="d-flex align-items-center mb-1">
+                                    <span class="text-warning me-1"><i class="fas fa-star"></i></span>
+                                    <span class="fw-bold me-1">4.2</span>
+                                    <span class="text-muted small">(200)</span>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="badge bg-light text-danger border-danger border px-2 py-1 small">Rupture de stock imminent</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">4,500 DZD</h4>
+                                    <button class="btn btn-cart add-to-cart" data-id="3"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <div class="position-relative">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1544117518-30dd07835b62?w=600&q=80" class="card-img-top" alt="Smartwatch">
+                            </div>
+                                <button class="wishlist-btn active-wishlist"><i class="fas fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-vendor small fw-bold mb-1">ELECTRONICS</p>
+                                <h5 class="card-title fw-bold">Zenith Smartwatch Pro Orange Edition.</h5>
+                                <div class="d-flex align-items-center mb-1">
+                                    <span class="text-warning me-1"><i class="fas fa-star"></i></span>
+                                    <span class="fw-bold me-1">4.6</span>
+                                    <span class="text-muted small">(150)</span>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="badge bg-light text-muted border-secondary border px-2 py-1 small">Stock limité</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">5,000 DZD</h4>
+                                    <button class="btn btn-cart add-to-cart" data-id="4"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="col">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <div class="position-relative">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&q=80" class="card-img-top" alt="Lipstick">
+                            </div>
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-vendor small fw-bold mb-1">BEAUTY</p>
+                                <h5 class="card-title fw-bold">Pack Lipstick Huda Beauty, Multiple Shades.</h5>
+                                <div class="d-flex align-items-center mb-1">
+                                    <span class="text-warning me-1"><i class="fas fa-star"></i></span>
+                                    <span class="fw-bold me-1">4.9</span>
+                                    <span class="text-muted small">(300)</span>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="badge bg-light text-danger border-danger border px-2 py-1 small">Out of stock</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">7,500 DZD</h4>
+                                    <button class="btn btn-cart add-to-cart disabled" data-id="5"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <div class="position-relative">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" class="card-img-top" alt="T-shirts">
+                            </div>
+                                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-vendor small fw-bold mb-1">CLOTHING</p>
+                                <h5 class="card-title fw-bold">Basic T-shirts Premium Quality, Breathable.</h5>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="text-warning me-1"><i class="fas fa-star"></i></span>
+                                    <span class="fw-bold me-1">4.8</span>
+                                    <span class="text-muted small">(300)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">1,500 DZD</h4>
+                                    <button class="btn btn-cart add-to-cart" data-id="6"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="bg-white border-top py-5 px-4 mt-5">
+                <div class="container-fluid">
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="logo-container mb-3">
+                                <span class="logo-ven" style="font-size: 1.5rem;">VEN</span><span class="logo-dow" style="font-size: 1.5rem;">DOW</span>
+                            </div>
+                            <p class="text-muted small">LE PREMIER MARCHÉ MULTI-VENDEURS EN ALGÉRIE. CONNECTEZ-VOUS AVEC LES VENDEURS LOCAUX ET DÉCOUVREZ DES PRODUITS UNIQUES DANS TOUTES LES CATÉGORIES.</p>
+                        </div>
+                        <div class="col-md-2 offset-lg-1">
+                            <h6 class="fw-bold mb-3 text-uppercase small">Boutique</h6>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Nouveautés</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Ventes Populaires</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Marques</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Offres Exclusives</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h6 class="fw-bold mb-3 text-uppercase small">Support</h6>
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Centre d'aide</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Sécurité</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Retours & Remboursements</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Contactez-nous</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <h6 class="fw-bold mb-3 text-uppercase small">Newsletter</h6>
+                            <div class="newsletter-form position-relative">
+                                <input type="email" class="form-control rounded-pill pe-5" placeholder="Votre email">
+                                <button class="btn btn-primary rounded-pill position-absolute top-50 end-0 translate-middle-y me-1 px-3">S'abonner</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5 pt-4 border-top text-muted small">
+                        © 2026 Vendow Inc. Tous droits réservés.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vend.js"></script>
+</body>
+</html>
