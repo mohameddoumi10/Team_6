@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENDOW Seller - Dashboard</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="bg-white">
+            <div class="sidebar-header p-4">
+                <div class="logo-box d-flex align-items-center mb-1">
+                    <img src="logo.svg" alt="VENDOW Logo" class="me-2" style="max-height: 50px;">
+                    <h5 class="m-0 fw-bold text-main">VENDOW <span class="text-primary">Seller</span></h5>
+                </div>
+                <p class="text-muted small">Shop Manager Pro</p>
+            </div>
+
+            <div class="sidebar-menu px-3">
+                <p class="text-uppercase text-muted fw-semibold small mb-2 px-3">Menu</p>
+                <ul class="nav flex-column mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-page="dashboard">
+                            <i class="bi bi-grid-fill me-2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="inventory">
+                            <i class="bi bi-box-seam me-2"></i> Inventory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="orders">
+                            <i class="bi bi-cart3 me-2"></i> Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="analytics">
+                            <i class="bi bi-bar-chart me-2"></i> Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="customers">
+                            <i class="bi bi-people me-2"></i> Customers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="freelancers">
+                            <i class="bi bi-person-workspace me-2"></i> Freelancers
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="text-uppercase text-muted fw-semibold small mb-2 px-3">General</p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="settings">
+                            <i class="bi bi-gear me-2"></i> Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="help">
+                            <i class="bi bi-question-circle me-2"></i> Help
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#" id="logoutBtn">
+                            <i class="bi bi-box-arrow-left me-2"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 py-3">
+                    <div class="d-flex align-items-center w-100">
+                        <button class="btn btn-white border-0 shadow-sm me-2 d-lg-none" id="sidebarToggle">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        
+                        <div class="search-box position-relative flex-grow-1 me-2" id="navbarSearch">
+                            <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                            <input type="text" class="form-control rounded-pill ps-5 bg-white border-0 shadow-sm"
+                                placeholder="Search...">
+                        </div>
+
+                        <div class="d-flex align-items-center flex-shrink-0">
+                            <button class="btn btn-primary rounded-pill px-3 px-lg-4 me-2" id="addProduct">
+                                <i class="bi bi-plus-lg me-lg-1"></i> <span class="d-none d-lg-inline">Add Product</span>
+                            </button>
+                            <div class="profile-circle bg-secondary text-white d-flex align-items-center justify-content-center fw-bold">
+                                M
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+
+            <div class="container-fluid px-4">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h2 class="fw-bold mb-1">OVERVIEW</h2>
+                        <p class="text-muted">Welcome back, <span class="text-primary fw-medium">Mohamed</span>. Your
+                            shop is performing <span class="text-success fw-bold">12% better</span> than the last week
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Metrics Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-6 col-lg-3">
+                        <div class="card metric-card border-0 shadow-sm bg-gradient-blue text-white h-100">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between position-relative">
+                                <div>
+                                    <p class="card-title fw-medium opacity-75 mb-1">Total Revenue</p>
+                                    <h2 class="card-text fw-bold mb-0">16M</h2>
+                                </div>
+                                <div class="mt-3">
+                                    <span class="badge bg-light text-primary rounded-pill">
+                                        <i class="bi bi-arrow-up-short"></i> 5% Increased from last month
+                                    </span>
+                                </div>
+                                <div class="position-absolute top-0 end-0 m-3 arrow-icon">
+                                    <i class="bi bi-arrow-up-right-circle-fill fs-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card metric-card border-0 shadow-sm bg-white h-100">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between position-relative">
+                                <div>
+                                    <p class="card-title text-muted fw-medium mb-1">Total Orders</p>
+                                    <h2 class="card-text fw-bold mb-0 text-orange">500</h2>
+                                </div>
+                                <div class="mt-3">
+                                    <span class="badge bg-orange-soft text-orange rounded-pill">
+                                        <i class="bi bi-arrow-up-short"></i> 6% Increased from last month
+                                    </span>
+                                </div>
+                                <div class="position-absolute top-0 end-0 m-3 arrow-icon opacity-25">
+                                    <i class="bi bi-arrow-up-right-circle fs-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card metric-card border-0 shadow-sm bg-white h-100">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between position-relative">
+                                <div>
+                                    <p class="card-title text-muted fw-medium mb-1">Conversion Rate</p>
+                                    <h2 class="card-text fw-bold mb-0 text-primary">3.42%</h2>
+                                </div>
+                                <div class="mt-3">
+                                    <span class="badge bg-primary-soft text-primary rounded-pill">
+                                        <i class="bi bi-dash"></i> -2.1%
+                                    </span>
+                                </div>
+                                <div class="position-absolute top-0 end-0 m-3 arrow-icon opacity-25">
+                                    <i class="bi bi-arrow-up-right-circle fs-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card metric-card border-0 shadow-sm bg-white h-100">
+                            <div class="card-body p-4 d-flex flex-column justify-content-between position-relative">
+                                <div>
+                                    <p class="card-title text-muted fw-medium mb-1">Active Inventory</p>
+                                    <h2 class="card-text fw-bold mb-0 text-orange">456 <span
+                                            class="fs-6 fw-normal text-muted">Items</span></h2>
+                                </div>
+                                <div class="mt-3">
+                                    <span class="badge bg-danger-soft text-danger rounded-pill">Low Stock</span>
+                                </div>
+                                <div class="position-absolute top-0 end-0 m-3 arrow-icon opacity-25">
+                                    <i class="bi bi-arrow-up-right-circle fs-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <!-- Sales Performance -->
+                    <div class="col-md-8">
+                        <div class="card border-0 shadow-sm bg-white h-100 p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold m-0">Sales Performance</h5>
+                                <div class="dropdown">
+                                    <button
+                                        class="btn btn-outline-orange bg-orange-soft dropdown-toggle rounded-pill btn-sm px-3"
+                                        type="button">
+                                        Last 7 Days
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="chart-container position-relative mt-4">
+                                <!-- Tooltip placeholder -->
+                                <div id="chart-tooltip" class="chart-line-tooltip d-none">
+                                    <span class="value">0%</span>
+                                    <div class="pointer"></div>
+                                </div>
+                                
+                                <svg width="100%" height="200" viewBox="0 0 700 200" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="line-gradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#f27121" />
+                                            <stop offset="100%" stop-color="#e94057" />
+                                        </linearGradient>
+                                    </defs>
+                                    
+                                    <!-- Horizontal grid lines -->
+                                    <line x1="0" y1="50" x2="700" y2="50" stroke="#f0f0f0" stroke-width="1" />
+                                    <line x1="0" y1="100" x2="700" y2="100" stroke="#f0f0f0" stroke-width="1" />
+                                    <line x1="0" y1="150" x2="700" y2="150" stroke="#f0f0f0" stroke-width="1" />
+                                    
+                                    <!-- The Line -->
+                                    <path id="chart-line" d="M 50 150 L 150 70 L 250 110 L 350 40 L 450 60 L 550 140 L 650 100" 
+                                          fill="none" stroke="url(#line-gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                    
+                                    <!-- Data Points -->
+                                    <circle class="chart-point" cx="50" cy="150" r="5" data-val="30%" />
+                                    <circle class="chart-point" cx="150" cy="70" r="5" data-val="65%" />
+                                    <circle class="chart-point" cx="250" cy="110" r="5" data-val="45%" />
+                                    <circle class="chart-point" cx="350" cy="40" r="5" data-val="80%" />
+                                    <circle class="chart-point" cx="450" cy="60" r="5" data-val="70%" />
+                                    <circle class="chart-point" cx="550" cy="140" r="5" data-val="40%" />
+                                    <circle class="chart-point" cx="650" cy="100" r="5" data-val="55%" />
+                                </svg>
+
+                                <div class="d-flex justify-content-between px-4 mt-3">
+                                    <span class="text-muted small fw-bold">S</span>
+                                    <span class="text-muted small fw-bold">M</span>
+                                    <span class="text-muted small fw-bold">T</span>
+                                    <span class="text-muted small fw-bold">W</span>
+                                    <span class="text-muted small fw-bold">T</span>
+                                    <span class="text-muted small fw-bold">F</span>
+                                    <span class="text-muted small fw-bold">S</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Selling Categories -->
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm bg-white h-100 p-4">
+                            <h5 class="fw-bold mb-4">Top Selling Categories</h5>
+                            <div class="category-list">
+                                <div class="category-item mb-4">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="fw-medium text-muted small">Electronics</span>
+                                        <span class="text-muted small">42%</span>
+                                    </div>
+                                    <div class="progress rounded-pill bg-light" style="height: 6px;">
+                                        <div class="progress-bar bg-primary rounded-pill" style="width: 42%"></div>
+                                    </div>
+                                </div>
+                                <div class="category-item mb-4">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="fw-medium text-muted small">Accessories</span>
+                                        <span class="text-muted small">28%</span>
+                                    </div>
+                                    <div class="progress rounded-pill bg-light" style="height: 6px;">
+                                        <div class="progress-bar bg-primary rounded-pill" style="width: 28%"></div>
+                                    </div>
+                                </div>
+                                <div class="category-item mb-4">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="fw-medium text-muted small">Home & Office</span>
+                                        <span class="text-muted small">18%</span>
+                                    </div>
+                                    <div class="progress rounded-pill bg-light" style="height: 6px;">
+                                        <div class="progress-bar bg-primary rounded-pill" style="width: 18%"></div>
+                                    </div>
+                                </div>
+                                <div class="category-item mb-4">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="fw-medium text-muted small">Others</span>
+                                        <span class="text-muted small">12%</span>
+                                    </div>
+                                    <div class="progress rounded-pill bg-light" style="height: 6px;">
+                                        <div class="progress-bar bg-primary rounded-pill" style="width: 12%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-auto">
+                                <a href="#" class="text-primary text-decoration-none small">View All Analytics</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <!-- Recent Orders -->
+                    <div class="col-md-7">
+                        <div class="card border-0 shadow-sm bg-white p-4 h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold m-0">Recent Orders</h5>
+                                <a href="#" class="text-primary text-decoration-none small">View All</a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover border-0 align-middle">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th class="border-0 text-muted small fw-bold">ORDER ID</th>
+                                            <th class="border-0 text-muted small fw-bold">CUSTOMER</th>
+                                            <th class="border-0 text-muted small fw-bold text-end">AMOUNT</th>
+                                            <th class="border-0 text-muted small fw-bold text-center">STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold text-muted">#VD-9021</td>
+                                            <td class="fw-medium">Belarbi Serine</td>
+                                            <td class="text-end fw-bold">2000 DA</td>
+                                            <td class="text-center">
+                                                <span
+                                                    class="badge bg-primary-soft text-primary rounded-pill px-3 py-2">Processing</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold text-muted">#VD-9020</td>
+                                            <td class="fw-medium">Ziani Amina</td>
+                                            <td class="text-end fw-bold">4500 DA</td>
+                                            <td class="text-center">
+                                                <span
+                                                    class="badge bg-success-soft text-success rounded-pill px-3 py-2">Completed</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Alerts -->
+                    <div class="col-md-5">
+                        <div class="card border-0 shadow-sm bg-white p-4 h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold m-0">Inventory Alerts</h5>
+                                <button class="btn btn-orange-soft text-orange btn-sm rounded-pill px-3 fw-bold">Restock
+                                    All</button>
+                            </div>
+
+                            <div class="alert-item d-flex align-items-center p-3 rounded-4 bg-light mb-3">
+                                <div class="product-img-box bg-white p-2 rounded-3 me-3">
+                                    <img src="orangesmartwatch.avif" alt="Orange Smartwatch" class="img-fluid"
+                                        style="width: 40px; height: 40px; object-fit: contain;">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 fw-bold small">Zenith Smartwatch Pro Orange</h6>
+                                    <p class="mb-0 text-muted extra-small">SKU: ZNT-SW-01</p>
+                                </div>
+                                <div class="text-end">
+                                    <p class="mb-0 text-danger fw-bold small">3 Left</p>
+                                    <p class="mb-0 text-danger-soft extra-small text-uppercase fw-bold">Critical</p>
+                                </div>
+                            </div>
+
+                            <div class="alert-item d-flex align-items-center p-3 rounded-4 bg-light">
+                                <div class="product-img-box bg-white p-2 rounded-3 me-3">
+                                    <img src="blue-smartwatch.webp" alt="Blue Smartwatch" class="img-fluid"
+                                        style="width: 40px; height: 40px; object-fit: contain;">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 fw-bold small">Zenith Smartwatch Pro Blue</h6>
+                                    <p class="mb-0 text-muted extra-small">SKU: ACU-PH-04</p>
+                                </div>
+                                <div class="text-end">
+                                    <p class="mb-0 text-orange fw-bold small">15 Left</p>
+                                    <p class="mb-0 text-orange-soft extra-small text-uppercase fw-bold">Warning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar Overlay for Mobile -->
+        <div id="sidebar-overlay" class="d-none"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="vend.js"></script>
+</body>
+
+</html>

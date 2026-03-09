@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENDOW Business | Shop Owner Portal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Poppins & Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <div id="content-inner">
+            <div class="d-flex" id="wrapper">
+                <!-- Sidebar -->
+                <div class="border-end bg-white" id="sidebar-wrapper">
+                    <div
+                        class="sidebar-heading border-bottom bg-light d-flex align-items-center py-4 px-4 position-relative">
+                        <img src="logo.svg" alt="Vendow Logo" class="me-2"
+                            style="width: 40px; height: 40px; border-radius: 8px;">
+                        <div>
+                            <h5 class="mb-0 fw-bold color-primary">VENDOW Freelance</h5>
+                            <small class="text-muted">Freelancers Portal</small>
+                        </div>
+                        <!-- Close button for mobile -->
+                        <button class="btn d-lg-none position-absolute end-0 top-50 translate-middle-y me-2"
+                            id="sidebar-close">
+                            <i class="fas fa-times fs-4 text-muted"></i>
+                        </button>
+                    </div>
+                    <div class="list-group list-group-flush pt-4">
+                        <div class="px-4 mb-2"><small class="text-uppercase text-muted fw-bold"
+                                style="font-size: 0.7rem;">Menu</small></div>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 active border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-th-large me-3"></i>Dashboard
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-box me-3"></i>Inventory
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-shopping-cart me-3"></i>Orders
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-chart-line me-3"></i>Analytics
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-users me-3"></i>Customers
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-user-tie me-3"></i>Freelancers
+                        </a>
+
+                        <div class="px-4 mt-4 mb-2"><small class="text-uppercase text-muted fw-bold"
+                                style="font-size: 0.7rem;">General</small></div>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-cog me-3"></i>Settings
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mb-1">
+                            <i class="fas fa-question-circle me-3"></i>Help
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action list-group-item-light p-3 border-0 mx-3 rounded-3 mt-4 text-danger">
+                            <i class="fas fa-sign-out-alt me-3"></i>Logout
+                        </a>
+                    </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+
+                <!-- Page Content -->
+                <div id="page-content-wrapper" class="bg-light-soft">
+                    <!-- Navbar -->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-3 px-4 sticky-top">
+                        <div class="container-fluid p-0">
+                            <div class="search-bar d-flex align-items-center bg-light px-3 py-2 rounded-pill w-50">
+                                <button class="btn d-lg-none me-2 p-0 border-0" id="sidebar-toggle">
+                                    <i class="fas fa-bars fs-4 text-primary"></i>
+                                </button>
+                                <i class="fas fa-search text-muted me-2"></i>
+                                <input type="text" class="form-control border-0 bg-transparent p-0"
+                                    placeholder="Search services..." style="box-shadow: none;">
+                            </div>
+
+                            <div class="ms-auto d-flex align-items-center">
+                                <ul class="navbar-nav me-4 mb-2 mb-lg-0 fw-medium">
+                                    <li class="nav-item"><a class="nav-link px-3" href="#">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link px-3" href="#">Requests</a></li>
+                                    <li class="nav-item"><a class="nav-link px-3" href="#">Messages</a></li>
+                                </ul>
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative me-3">
+                                        <i class="far fa-bell fs-5 text-muted"></i>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle p-1 bg-primary border border-light rounded-circle"></span>
+                                    </div>
+                                    <img src="sarah.png" alt="User Profile" class="rounded-circle"
+                                        style="width: 40px; height: 40px; object-fit: cover; border: 2px solid #eee;">
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Content Area -->
+                    <div class="container-fluid px-5 py-5">
+                        <div class="row mb-5">
+                            <div class="col-lg-8">
+                                <h1 class="fw-bold color-primary mb-2">Grow Your Brand</h1>
+                                <p class="text-muted fs-5 mb-4">Connect with top-tier creative freelancers specialized
+                                    in helping shop owners elevate their online presence through stunning visuals and
+                                    strategic branding.</p>
+
+                                <div class="d-flex flex-wrap gap-3 mb-4" id="category-filters">
+                                    <button class="btn btn-primary rounded-pill px-4 py-2 filter-btn active"
+                                        data-filter="all">All Services</button>
+                                    <button class="btn btn-outline-secondary rounded-pill px-4 py-2 filter-btn bg-white"
+                                        data-filter="branding">Branding</button>
+                                    <button class="btn btn-outline-secondary rounded-pill px-4 py-2 filter-btn bg-white"
+                                        data-filter="photography">Photography</button>
+                                    <button class="btn btn-outline-secondary rounded-pill px-4 py-2 filter-btn bg-white"
+                                        data-filter="video">Video Editing</button>
+                                    <button class="btn btn-outline-secondary rounded-pill px-4 py-2 filter-btn bg-white"
+                                        data-filter="marketing">Marketing</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Section -->
+                        <div
+                            class="featured-card bg-white rounded-4 shadow-sm overflow-hidden mb-5 d-flex flex-column flex-lg-row">
+                            <div class="featured-img position-relative" style="flex: 1.2;">
+                                <img src="feature service.jpg" alt="Featured Service" class="w-100 h-100"
+                                    style="object-fit: cover; min-height: 350px;">
+                            </div>
+                            <div class="featured-content p-5 d-flex flex-column justify-content-center"
+                                style="flex: 1;">
+                                <span class="badge bg-primary-soft text-primary mb-3 px-3 py-2 text-uppercase fw-bold"
+                                    style="font-size: 0.7rem; width: fit-content; letter-spacing: 1px;">Feature
+                                    Service</span>
+                                <h2 class="fw-bold mb-3 color-dark">Complete Shop Re-Branding Package</h2>
+                                <p class="text-muted mb-4">Everything you need for a professional look: Logo design,
+                                    brand guide, typography, color palette, and social media kits.</p>
+
+                                <div class="d-flex align-items-center mb-4">
+                                    <img src="sarah.png" alt="Sarah Bendo" class="rounded-circle me-3"
+                                        style="width: 50px; height: 50px; object-fit: cover;">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Sarah Bendo</h6>
+                                        <p class="mb-0 text-muted small">Senior Brand Designer • 5.0 (200 reviews)</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-between mt-auto">
+                                    <div>
+                                        <small class="text-muted text-uppercase fw-bold d-block"
+                                            style="font-size: 0.7rem;">Starting From</small>
+                                        <span class="fs-4 fw-bold color-primary">15000.00 DZD</span>
+                                    </div>
+                                    <button class="btn btn-primary-gradient px-4 py-3 rounded-3 fw-bold shadow-lg">View
+                                        Package</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Grid -->
+                        <div class="row g-4" id="service-grid">
+                            <!-- Photography Card -->
+                            <div class="col-md-6 col-lg-4 service-item" data-category="photography">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <div class="position-relative">
+                                        <img src="photography.jpg" class="card-img-top" alt="Product Photography"
+                                            style="height: 250px; object-fit: cover;">
+                                        <div class="position-absolute top-0 end-0 m-3">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm fw-bold">
+                                                <i class="fas fa-star text-warning me-1"></i> 4.9
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-4">
+                                        <small class="text-uppercase color-primary fw-bold"
+                                            style="font-size: 0.7rem;">Photography</small>
+                                        <h5 class="card-title fw-bold mt-2 mb-3">High-End Product Photography for
+                                            E-commerce</h5>
+                                        <p class="card-text text-muted small mb-4">Crisp, professional photos of your
+                                            products for your online store. White background or lifestyle setups
+                                            available.</p>
+
+                                        <div
+                                            class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                                            <div class="d-flex align-items-center">
+                                                <img src="youcef.png" alt="Youcef Berno" class="rounded-circle me-2"
+                                                    style="width: 32px; height: 32px; object-fit: cover;">
+                                                <span class="small fw-bold">Youcef Berno</span>
+                                            </div>
+                                            <span class="small text-muted fw-bold">From 7000 DA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Branding Card -->
+                            <div class="col-md-6 col-lg-4 service-item" data-category="branding">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <div class="position-relative">
+                                        <img src="branding.jpg" class="card-img-top" alt="Logo Design"
+                                            style="height: 250px; object-fit: cover;">
+                                        <div class="position-absolute top-0 end-0 m-3">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm fw-bold">
+                                                <i class="fas fa-star text-warning me-1"></i> 4.7
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-4">
+                                        <small class="text-uppercase color-primary fw-bold"
+                                            style="font-size: 0.7rem;">Branding</small>
+                                        <h5 class="card-title fw-bold mt-2 mb-3">Minimalist Logo & Identity Design</h5>
+                                        <p class="card-text text-muted small mb-4">Sleek, modern logos that stand out
+                                            and tell your brand story in a glance. Includes social media profile kits.
+                                        </p>
+
+                                        <div
+                                            class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                                            <div class="d-flex align-items-center">
+                                                <img src="asma.png" alt="Asma Kara" class="rounded-circle me-2"
+                                                    style="width: 32px; height: 32px; object-fit: cover;">
+                                                <span class="small fw-bold">Asma Kara</span>
+                                            </div>
+                                            <span class="small text-muted fw-bold">From 3000 DA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Editing Card -->
+                            <div class="col-md-6 col-lg-4 service-item" data-category="video">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <div class="position-relative">
+                                        <img src="video editing.jpg" class="card-img-top" alt="Video Editing"
+                                            style="height: 250px; object-fit: cover;">
+                                        <div class="position-absolute top-0 end-0 m-3">
+                                            <span
+                                                class="badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm fw-bold">
+                                                <i class="fas fa-star text-warning me-1"></i> 4.8
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-4">
+                                        <small class="text-uppercase color-primary fw-bold"
+                                            style="font-size: 0.7rem;">Video Editing</small>
+                                        <h5 class="card-title fw-bold mt-2 mb-3">Short-Form Content for TikTok & Reels
+                                        </h5>
+                                        <p class="card-text text-muted small mb-4">Engaging, high-energy edits to
+                                            showcase your store and boost your social media engagement.</p>
+
+                                        <div
+                                            class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                                            <div class="d-flex align-items-center">
+                                                <img src="saleh.png" alt="Saleh Madani" class="rounded-circle me-2"
+                                                    style="width: 32px; height: 32px; object-fit: cover;">
+                                                <span class="small fw-bold">Saleh Madani</span>
+                                            </div>
+                                            <span class="small text-muted fw-bold">From 5000 DA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="bg-white pt-5 pb-4 mt-5 border-top">
+                        <div class="container-fluid px-5">
+                            <div class="row">
+                                <div class="col-lg-4 mb-4">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <img src="logo.svg" alt="Vendow Logo" class="me-2"
+                                            style="width: 45px; height: 45px;">
+                                        <h3 class="mb-0 fw-bold color-primary">VENDOW</h3>
+                                    </div>
+                                    <p class="text-muted pe-lg-5" style="font-size: 0.85rem; line-height: 1.6;">THE
+                                        ALL-IN-ONE ECOSYSTEM FOR SHOP OWNERS TO MANAGE, GROW, AND SCALE THEIR BUSINESSES
+                                        WITH EASE.</p>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <h6 class="fw-bold mb-4 text-uppercase"
+                                        style="font-size: 0.75rem; letter-spacing: 1px;">Services</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><a href="#"
+                                                class="text-muted text-decoration-none small">Branding</a></li>
+                                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none small">Video
+                                                Editing</a></li>
+                                        <li class="mb-2"><a href="#"
+                                                class="text-muted text-decoration-none small">Marketing</a></li>
+                                        <li class="mb-2"><a href="#"
+                                                class="text-muted text-decoration-none small">Photography</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <h6 class="fw-bold mb-4 text-uppercase"
+                                        style="font-size: 0.75rem; letter-spacing: 1px;">Company</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none small">About
+                                                Us</a></li>
+                                        <li class="mb-2"><a href="#"
+                                                class="text-muted text-decoration-none small">Careers</a></li>
+                                        <li class="mb-2"><a href="#"
+                                                class="text-muted text-decoration-none small">Blog</a></li>
+                                        <li class="mb-2"><a href="#"
+                                                class="text-muted text-decoration-none small">Press</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <h6 class="fw-bold mb-4 text-uppercase"
+                                        style="font-size: 0.75rem; letter-spacing: 1px;">Support</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none small">Help
+                                                Center</a></li>
+                                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none small">Terms
+                                                of Services</a></li>
+                                        <li class="mb-2"><a href="#"
+                                                class="text-muted text-decoration-none small">Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="my-4 text-muted opacity-25">
+                            <div class="text-center text-muted small">
+                                © 2026 Vendow Inc. All rights reserved.
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /#page-content-wrapper -->
+            </div>
+            <!-- /#wrapper -->
+
+            <!-- Sidebar Overlay for mobile -->
+            <div id="sidebar-overlay" class="d-lg-none"></div>
+
+        </div>
+        <!-- /#content-inner -->
+    </div>
+    <!-- /#page-wrapper -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="vend.js"></script>
+</body>
+
+</html>

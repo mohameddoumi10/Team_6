@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>VENDOW</title>
+
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <div id="content-inner">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+    <div class="container d-flex align-items-center">
+
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="../img/logo.svg" width="70" class="me-2">
+        VENDOW
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shops</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        </ul>
+
+        <div>
+          <button class="btn btn-nav-login me-2 login-trigger" data-bs-toggle="modal" data-bs-target="#authModal">Log
+            In</button>
+          <button class="btn btn-nav-signup signup-trigger" data-bs-toggle="modal" data-bs-target="#authModal">Sign
+            Up</button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <div class="col-lg-6 hero-text order-2 order-lg-1">
+
+          <h1>
+            Shop Real Algerian <br>
+            Stores with <span class="highlight">Total Confidence</span>
+          </h1>
+
+          <p>
+            Shop securely for fashion, electronics, and more, or easily
+            launch your own digital storefront today.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn btn-orange signup-trigger" data-bs-toggle="modal" data-bs-target="#authModal">Start
+              Shopping</button>
+            <button class="btn btn-blue signup-trigger business-trigger" data-bs-toggle="modal"
+              data-bs-target="#authModal">Start Your Store</button>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 order-1 order-lg-2 hero-img-container">
+          <img src="../img/hero.png" class="hero-img">
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section class="store-carousel">
+
+    <button class="carousel-btn left">&#8592;</button>
+
+    <div class="carousel-track">
+
+      <div class="store-card side">
+        <img src="../img/second left.jpg" class="store-img">
+        <div class="store-info">
+
+          <div class="store-header">
+            <h5 class="store-name">Makup Shop</h5>
+            <div class="rating">★★★★★</div>
+          </div>
+
+          <p>Fashion & Accessories</p>
+          <p>📍 Algiers</p>
+
+        </div>
+      </div>
+
+      <div class="store-card active">
+
+        <img src="../img/noura store.jpg" class="store-img">
+
+        <div class="store-info">
+
+          <div class="store-header">
+            <h5 class="store-name">Noura Store</h5>
+            <div class="rating">★★★★★</div>
+          </div>
+
+          <p>Women's Clothes</p>
+          <p>📍 Bab Ezzouar</p>
+
+        </div>
+      </div>
+
+      <div class="store-card side">
+
+        <img src="../img/second right.jpg" class="store-img">
+
+        <div class="store-info">
+
+          <div class="store-header">
+            <h5 class="store-name">Fashion Store</h5>
+            <div class="rating">★★★★★</div>
+          </div>
+
+          <p>Accessories</p>
+          <p>📍 Algiers</p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-btn right">&#8594;</button>
+
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features-section">
+    <div class="container">
+
+      <!-- Heading -->
+      <div class="text-center mb-0">
+        <h2 class="features-title mb-3">
+          One Platform, <span class="text-orange">Endless Possibilities</span>
+        </h2>
+        <p class="features-subtitle">
+          We've build an ecosystem specifically for the Algerian market, empowering the<br>
+          three main actors of the digital economy
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="row g-4 align-items-end features-row">
+
+        <!-- Card 1: Shoppers -->
+        <div class="col-md-4">
+          <div class="feature-card feature-card-orange">
+            <div class="feature-card-header">
+              <img src="../img/pannier.png" class="feature-icon" alt="Shoppers">
+              <h3 class="feature-card-title">For Shoppers</h3>
+            </div>
+            <div class="feature-card-body-content">
+              <p class="feature-card-desc">
+                Browse your favorite locale stores from home. Compare prices instantly and enjoy
+                organized shopping lists, categories and more options.
+              </p>
+              <ul class="feature-checklist">
+                <li>Search by City and Wilaya</li>
+                <li>Search by picture</li>
+                <li>Rated stores for your trust</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Vendors (center, taller) -->
+        <div class="col-md-4">
+          <div class="feature-card feature-card-primary feature-card-center">
+            <div class="feature-card-header">
+              <img src="../img/market.png" class="feature-icon" alt="Vendors">
+              <h3 class="feature-card-title">For Vendors</h3>
+            </div>
+            <div class="feature-card-body-content">
+              <p class="feature-card-desc">
+                Transform your physical shop into a digital powerhouse.
+                Manage stock effortlessly and reach customers beyond your street.
+              </p>
+              <ul class="feature-checklist">
+                <li>Personalized Digital Boutique</li>
+                <li>Smart Inventory Management</li>
+                <li>Access to freelance services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Freelancers -->
+        <div class="col-md-4">
+          <div class="feature-card feature-card-orange">
+            <div class="feature-card-header">
+              <img src="../img/user.png" class="feature-icon" alt="Freelancers">
+              <h3 class="feature-card-title">For Freelancers</h3>
+            </div>
+            <div class="feature-card-body-content">
+              <p class="feature-card-desc">
+                Offer your creative services directly to store owners. Help them stand out with
+                branding, photography, and video services.
+              </p>
+              <ul class="feature-checklist">
+                <li>Direct Freelance Marketplace</li>
+                <li>Secure Project Payments</li>
+                <li>Portfolio Showcase for Stores</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALGERIAN MARKET SECTION ===== -->
+  <section class="market-section">
+    <div class="container">
+      <div class="market-container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 market-text">
+            <h2 class="market-title">
+              Built by Algerians,<br>
+              for the <span class="text-orange">Algerian market</span>
+            </h2>
+            <p class="market-desc">
+              We understand the unique challenges of local commerce. Our platform supports local
+              payment methods, adapts to regional logistics, and celebrates the richness of Algerian store
+              culture.
+            </p>
+            <ul class="market-checklist">
+              <li>
+                <div class="check-icon blue">✓</div>
+                <div class="check-content">
+                  <span class="check-title blue">Trust First</span>
+                  <p class="check-subtitle blue">Verified sellers and secure communication channels.</p>
+                </div>
+              </li>
+              <li>
+                <div class="check-icon orange">✓</div>
+                <div class="check-content">
+                  <span class="check-title orange">Ease and organization</span>
+                  <p class="check-subtitle orange">Easy browsing through categorized catalogues & more.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 market-img-container text-center">
+            <img src="../img/Group 1000004686.png" class="market-map-img" alt="Algeria Map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section text-center">
+    <div class="container">
+      <h2 class="cta-title">
+        Ready to join the future of<br>
+        <span class="text-orange">Algerian commerce ?</span>
+      </h2>
+      <p class="cta-subtitle">Verified sellers and secure communication channels.</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-section text-center">
+    <div class="container">
+      <h2 class="about-title">What is VENDOW?</h2>
+      <p class="about-subtitle">Vend more, Grow better</p>
+
+      <div class="row g-4 justify-content-center mt-4">
+        <div class="col-md-4">
+          <div class="about-card">
+            <h4 class="about-card-title">A community doing good</h4>
+            <p class="about-card-text">
+              VENDOW is an Algerian online marketplace, where you can find your favorite physical stores
+              and browse through them digitally. You can also build and manage your store in one place.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="about-card card-white">
+            <h4 class="about-card-title">Support independent creators</h4>
+            <p class="about-card-text">
+              There's no VENDOW warehouse, just millions of people selling the things they love. We make the
+              whole process easy, helping you connect directly with makers to find something extraordinary.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="about-card">
+            <h4 class="about-card-title">A community doing good</h4>
+            <p class="about-card-text">
+              Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are
+              always ready to step in for support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <img src="../img/logo.svg" height="40" class="mb-4" alt="Vendow Logo">
+          <p class="footer-tagline">
+            THE ALL-IN-ONE ECOSYSTEM FOR SHOP OWNERS TO MANAGE, GROW, AND SCALE THEIR BUSINESSES WITH EASE.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">SERVICES</h5>
+          <ul class="footer-links">
+            <li><a href="#">Branding</a></li>
+            <li><a href="#">Video Editing</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Photography</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5 class="footer-heading">COMPANY</h5>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5 class="footer-heading">SUPPORT</h5>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>© 2026 Vendow Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content auth-modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center pt-0 px-4 pb-5">
+
+          <img src="../img/logo.svg" width="60" class="mb-3" alt="Vendow Logo">
+          <h3 class="auth-modal-title mb-4" id="authModalTitle">Welcome Back</h3>
+          <p class="auth-modal-subtitle mb-4" id="authModalSubtitle">Log in to your account to continue.</p>
+
+          <!-- LOGIN FORM -->
+          <div id="loginFormContainer">
+            <form id="loginForm" class="auth-form text-start">
+              <div class="mb-3">
+                <label class="form-label fw-bold">Email address</label>
+                <input type="email" id="loginEmail" class="form-control auth-input" placeholder="name@example.com"
+                  required>
+              </div>
+              <div class="mb-4">
+                <label class="form-label fw-bold">Password</label>
+                <input type="password" id="loginPassword" class="form-control auth-input" placeholder="••••••••"
+                  required>
+              </div>
+
+              <div id="loginAlert" class="alert d-none" role="alert"></div>
+
+              <button type="submit" id="loginSubmitBtn" class="btn btn-auth-submit w-100 mb-3">Log In</button>
+            </form>
+
+            <div class="auth-divider"><span>or log in with</span></div>
+
+            <div class="d-flex justify-content-center gap-3 mt-3">
+              <button class="btn btn-social-auth"><img
+                  src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" width="20"></button>
+              <button class="btn btn-social-auth"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="#1877F2" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg></button>
+            </div>
+
+            <p class="mt-4 mb-0 auth-switch-text">Don't have an account? <a href="#" id="showSignupBtn"
+                class="text-primary fw-bold text-decoration-none">Sign up</a></p>
+          </div>
+
+          <!-- SIGNUP FORM -->
+          <div id="signupFormContainer" style="display: none;">
+            <form id="signupForm" class="auth-form text-start">
+              <div class="mb-3">
+                <label class="form-label fw-bold">Full Name</label>
+                <input type="text" id="signupName" class="form-control auth-input" placeholder="John Doe" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Email address</label>
+                <input type="email" id="signupEmail" class="form-control auth-input" placeholder="name@example.com"
+                  required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Account Type</label>
+                <select id="signupRole" class="form-select auth-input" required>
+                  <option value="customer" selected>Customer</option>
+                  <option value="business">Business</option>
+                  <option value="freelancer">Freelancer</option>
+                </select>
+              </div>
+              <div id="businessFields" class="d-none">
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Store Name</label>
+                  <input type="text" id="signupStoreName" class="form-control auth-input"
+                    placeholder="My Awesome Store">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Store Location</label>
+                  <input type="text" id="signupStoreLocation" class="form-control auth-input"
+                    placeholder="Algiers, Algeria">
+                </div>
+              </div>
+              <div id="freelancerFields" class="d-none">
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Skills</label>
+                  <input type="text" id="signupSkills" class="form-control auth-input"
+                    placeholder="Web Design, Marketing">
+                  <small class="text-muted">Separate multiple skills with a comma</small>
+                </div>
+              </div>
+              <div class="mb-4">
+                <label class="form-label fw-bold">Password</label>
+                <input type="password" id="signupPassword" class="form-control auth-input" placeholder="••••••••"
+                  required minlength="6">
+              </div>
+
+              <div id="signupAlert" class="alert d-none" role="alert"></div>
+
+              <button type="submit" id="signupSubmitBtn" class="btn btn-auth-submit w-100 mb-3">Create Account</button>
+            </form>
+
+            <div class="auth-divider"><span>or sign up with</span></div>
+
+            <div class="d-flex justify-content-center gap-3 mt-3">
+              <button class="btn btn-social-auth"><img
+                  src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" width="20"></button>
+              <button class="btn btn-social-auth"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="#1877F2" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg></button>
+            </div>
+
+            <p class="mt-4 mb-0 auth-switch-text">Already have an account? <a href="#" id="showLoginBtn"
+                class="text-primary fw-bold text-decoration-none">Log in</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+    const cards = document.querySelectorAll(".store-card");
+    let activeIndex = 1;
+
+    function updateCarousel() {
+
+      cards.forEach((card, index) => {
+
+        card.classList.remove("active", "side");
+
+        if (index === activeIndex) {
+          card.classList.add("active");
+        } else {
+          card.classList.add("side");
+        }
+
+      });
+
+    }
+
+    document.querySelector(".right").onclick = () => {
+      activeIndex = (activeIndex + 1) % cards.length;
+      updateCarousel();
+    };
+
+    document.querySelector(".left").onclick = () => {
+      activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+      updateCarousel();
+    };
+
+    updateCarousel();
+
+    // AUTH MODAL TOGGLE LOGIC
+    const showLoginBtn = document.getElementById("showLoginBtn");
+    const showSignupBtn = document.getElementById("showSignupBtn");
+    const loginFormContainer = document.getElementById("loginFormContainer");
+    const signupFormContainer = document.getElementById("signupFormContainer");
+    const authModalTitle = document.getElementById("authModalTitle");
+    const authModalSubtitle = document.getElementById("authModalSubtitle");
+
+    function switchToSignup() {
+      loginFormContainer.style.display = "none";
+      signupFormContainer.style.display = "block";
+      authModalTitle.textContent = "Create an Account";
+      authModalSubtitle.textContent = "Join our digital ecosystem today.";
+      document.getElementById("signupAlert").classList.add("d-none");
+    }
+
+    function switchToLogin() {
+      signupFormContainer.style.display = "none";
+      loginFormContainer.style.display = "block";
+      authModalTitle.textContent = "Welcome Back";
+      authModalSubtitle.textContent = "Log in to your account to continue.";
+      document.getElementById("loginAlert").classList.add("d-none");
+    }
+
+    showSignupBtn.onclick = (e) => {
+      e.preventDefault();
+      switchToSignup();
+    };
+
+    showLoginBtn.onclick = (e) => {
+      e.preventDefault();
+      switchToLogin();
+    };
+
+    // External buttons triggering the modal
+    document.querySelectorAll('.login-trigger').forEach(btn => {
+      btn.addEventListener('click', switchToLogin);
+    });
+
+    document.querySelectorAll('.signup-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchToSignup();
+        // Reset to customer by default unless it's a business trigger
+        if (!btn.classList.contains('business-trigger')) {
+          signupRole.value = 'customer';
+          signupRole.dispatchEvent(new Event('change'));
+        }
+      });
+    });
+
+    document.querySelectorAll('.business-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchToSignup();
+        signupRole.value = 'business';
+        signupRole.dispatchEvent(new Event('change'));
+      });
+    });
+
+    // Role Selection Logic for Signup Form
+    const signupRole = document.getElementById('signupRole');
+    const businessFields = document.getElementById('businessFields');
+    const freelancerFields = document.getElementById('freelancerFields');
+
+    signupRole.addEventListener('change', function () {
+      if (this.value === 'business') {
+        businessFields.classList.remove('d-none');
+        freelancerFields.classList.add('d-none');
+      } else if (this.value === 'freelancer') {
+        freelancerFields.classList.remove('d-none');
+        businessFields.classList.add('d-none');
+      } else {
+        businessFields.classList.add('d-none');
+        freelancerFields.classList.add('d-none');
+      }
+    });
+
+    // API Integration Logic
+    const API_URL = 'http://localhost:5000/api';
+
+    function showAlert(alertElementId, message, type) {
+      const alertEl = document.getElementById(alertElementId);
+      alertEl.textContent = message;
+      alertEl.className = `alert alert-${type}`;
+      alertEl.classList.remove('d-none');
+    }
+
+    // Login Form Submission
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('loginSubmitBtn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Logging in...';
+
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      try {
+        const response = await fetch(`${API_URL}/auth/login`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          showAlert('loginAlert', 'Login successful!', 'success');
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user', JSON.stringify(data.user));
+          // Provide visual feedback before potential redirect
+          setTimeout(() => {
+            const authModal = bootstrap.Modal.getInstance(document.getElementById('authModal'));
+            authModal.hide();
+            if (data.user.role === 'customer') {
+              window.location.href = '../costumer/index.html';
+            } else if (data.user.role === 'freelancer') {
+              window.location.href = '../freelancer/index.html';
+            } else if (data.user.role === 'business') {
+              window.location.href = '../business/index.html';
+            }
+          }, 1500);
+        } else {
+          showAlert('loginAlert', data.message || 'Login failed', 'danger');
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+        showAlert('loginAlert', 'Server connection error. Please try again.', 'danger');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Log In';
+      }
+    });
+
+    // Signup Form Submission
+    document.getElementById('signupForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('signupSubmitBtn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Creating Account...';
+
+      const full_name = document.getElementById('signupName').value;
+      const email = document.getElementById('signupEmail').value;
+      const password = document.getElementById('signupPassword').value;
+      const role = document.getElementById('signupRole').value;
+
+      const userData = { full_name, email, password, role };
+
+      if (role === 'business') {
+        userData.store_name = document.getElementById('signupStoreName').value;
+        userData.store_location = document.getElementById('signupStoreLocation').value;
+      } else if (role === 'freelancer') {
+        const skillsString = document.getElementById('signupSkills').value;
+        if (skillsString) {
+          userData.skills = skillsString.split(',').map(skill => skill.trim());
+        }
+      }
+
+      try {
+        const response = await fetch(`${API_URL}/auth/register`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(userData)
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          showAlert('signupAlert', 'Account created successfully!', 'success');
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user', JSON.stringify(data.user));
+          setTimeout(() => {
+            const authModal = bootstrap.Modal.getInstance(document.getElementById('authModal'));
+            authModal.hide();
+            if (data.user.role === 'customer') {
+              window.location.href = '../costumer/index.html';
+            } else if (data.user.role === 'freelancer') {
+              window.location.href = '../freelancer/index.html';
+            } else if (data.user.role === 'business') {
+              window.location.href = '../business/index.html';
+            }
+          }, 1500);
+        } else {
+          // Flatten express-validator array of errors if present
+          let errorMsg = data.message || 'Signup failed';
+          if (data.errors && Array.isArray(data.errors)) {
+            errorMsg = data.errors.map(err => err.msg).join(', ');
+          }
+          showAlert('signupAlert', errorMsg, 'danger');
+        }
+      } catch (error) {
+        console.error('Error during registration:', error);
+        showAlert('signupAlert', 'Server connection error. Please try again.', 'danger');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Create Account';
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
